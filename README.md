@@ -52,7 +52,7 @@ Check the dlopen documentation for all possible import paths.
 Clone the repo on your attacking pc:  
 `git clone https://github.com/lukrei/Triggerflow-Client.git`
 
-Run radarflow:   
+Run Triggerflow-Client:   
 `cargo run --release -- --connector pcileech`
 
 For an overview of CLI commands, run this:  

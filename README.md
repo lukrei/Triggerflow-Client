@@ -1,6 +1,11 @@
 # Triggerflow-Client
-A Triggerbot for CS2 using [memflow](https://github.com/memflow/memflow) This is a fork of https://github.com/superyu1337/radarflow2
+A Triggerbot for CS2 using [memflow](https://github.com/memflow/memflow) This is a fork of https://github.com/superyu1337/radarflow2.
 Please know that this a clone where some parts of the project radarflow2 are still in place which needs to be cleared at later stage of development. For Example parts of the code are still in the projects which tries to start a web socket but the webradar behind wont work anymore in this repo. If you want the web radar pleasse use the original repo from superyu1337.
+
+The Triggerflow-Client is a Triggerbot Application for Counter-Strike 2 which adds the first 4 Identities you select with your Crosshair to a "Whitelist" which are normally your Teammates ingame. It does this by using a Hash function where the first 4 unique Crosshair IDs are added to an array. After the array contains 4 unique values (your m8s) it will shoot automatically at other identities such as enemies or winebottles, window glass etc.
+This could propably optimized by finding out the identity ids of your current team where you play.
+
+The Triggerflow-Client is using a Offset Dumper to update all the offsets needed for triggerbot. It does this by using offsets-new.sh file. You should run this when a game update is released it fetches automtically the required files and copies it into the repository. Run this file if a game update has happend.
 
 Also be aware that this is only the client part which using memflow from ko1n and h33p. You need to make your own Server which runs on your gaming Windows VM. I have not included this here to prevent uncareful users to get banned of Valve Anti Cheat.
 

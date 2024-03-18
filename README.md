@@ -23,7 +23,7 @@ Before you begin, install the necessary memflow plugins using memflowup from the
 The needed Plugins are `memflow-qemu` and `memflow-win32` 
 
 Clone the repo on your vm host:  
-`git clone triggerflow-client.git`
+`git clone https://github.com/lukrei/Triggerflow-Client.git`
 
 Run triggerflow-client:   
 `cargo run --release`
@@ -50,7 +50,7 @@ Check the dlopen documentation for all possible import paths.
 ```
 
 Clone the repo on your attacking pc:  
-`git clone triggerflow-client.git`
+`git clone https://github.com/lukrei/Triggerflow-Client.git`
 
 Run radarflow:   
 `cargo run --release -- --connector pcileech`

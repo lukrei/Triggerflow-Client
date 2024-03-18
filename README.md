@@ -1,5 +1,10 @@
-# radarflow2
-A Web radar for CS2 using [memflow](https://github.com/memflow/memflow)
+# Triggerflow-Client
+A Triggerbot for CS2 using [memflow](https://github.com/memflow/memflow) This is a fork of https://github.com/superyu1337/radarflow2
+Please know that this a clone where some parts of the project radarflow2 are still in place which needs to be cleared at later stage of development. For Example parts of the code are still in the projects which tries to start a web socket but the webradar behind wont work anymore in this repo. If you want the web radar pleasse use the original repo from superyu1337.
+
+Also be aware that this is only the client part which using memflow from ko1n and h33p. You need to make your own Server which runs on your gaming Windows VM. I have not included this here to prevent uncareful users to get banned of Valve Anti Cheat.
+
+Use this triggerbot only for showcase of how a triggerbot works and use -insecure parameter in counter-strike 2 start parameters as the client part can you get banned by anti cheat.
 
 ## How can I run this?
 There is two ways to run this, the first way is using a KVM/QEMU setup to target a running VM to read memory out of it.
@@ -13,10 +18,12 @@ Before you begin, install the necessary memflow plugins using memflowup from the
 The needed Plugins are `memflow-qemu` and `memflow-win32` 
 
 Clone the repo on your vm host:  
-`git clone https://github.com/superyu1337/radarflow2.git`
+`git clone triggerflow-client.git`
 
-Run radarflow:   
+Run triggerflow-client:   
 `cargo run --release`
+
+Make your own triggerflow-server on your windows client os which receives the udp packet and then does some action with the game like executing shoot command in game. You can do this via the shoot Base Pointer. You can look Cheat Engine tutorials how to find this basepointer for shooting. I have not included this in this Repository since this is the sensitive part which can get you banned. The Server part of the Triggerflow-Client is completely undetected by VAC but it does not help you much in this scenario since you need some sort of windows application which shoots for you.
 
 For an overview of CLI commands, run this:  
 `cargo run --release -- --help`
@@ -38,7 +45,7 @@ Check the dlopen documentation for all possible import paths.
 ```
 
 Clone the repo on your attacking pc:  
-`git clone https://github.com/superyu1337/radarflow2.git`
+`git clone triggerflow-client.git`
 
 Run radarflow:   
 `cargo run --release -- --connector pcileech`
@@ -47,6 +54,6 @@ For an overview of CLI commands, run this:
 `cargo run --release -- --help`
 
 ## Detection Status
-VAC: ✅ (Undetected)  
-FaceIt: ❓ (Unknown, could work with proper spoofing on pcileech method)  
-ESEA: ❓ (Unknown, could work with proper spoofing on pcileech method)  
+VAC: ❓ (Unknown, could be detected because Triggerflow-Client requires some sort of Client on the Guest OS which could be detected by VAC)  
+FaceIt: ❓ (Unknown, could be detected because Triggerflow-Client requires some sort of Client on the Guest OS which could be detected by VAC)  
+ESEA: ❓ (Unknown, could be detected because Triggerflow-Client requires some sort of Client on the Guest OS which could be detected by VAC)  

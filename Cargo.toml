@@ -1,0 +1,45 @@
+[package]
+name = "radarflow"
+version = "0.2.3"
+authors = ["Janek S <development@superyu.xyz"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# memory
+memflow = "0.2.1"
+dataview = "1.0.1"
+
+# logging
+log = "0.4.21"
+simple_logger = "4.3.3"
+
+# error handling
+anyhow = "1.0.81"
+
+# derive stuff
+enum-primitive-derive = "0.3.0"
+num-traits = "0.2.18"
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.115"
+clap = { version = "4.5.4", features = ["derive", "string"] }
+
+# tokio
+tokio = { version = "1.37.0", features = ["full"] }
+
+# networking
+axum = { version = "0.7.5", features = ["ws"] }
+tower-http = { version = "0.5.2", features = ["fs"] }
+tower = "0.4.13"
+local-ip-address = "0.6.1"
+
+# other
+itertools = "0.12.1"
+
+
+[build-dependencies]
+reqwest = { version = "0.12.2", features = ["blocking"] }
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.115"
+vergen = { version = "8.3.1", features = ["build", "cargo", "git", "gitcl", "rustc", "si"] }

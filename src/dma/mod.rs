@@ -267,8 +267,8 @@ pub async fn run(radar_data: ArcRwlockRadarData, connector: Connector, pcileech_
 //            *radar = RadarData::empty(freq);
 //        }
 
-//        last_tick_count = data.tick_count;
-//        iters += 1;
+        last_tick_count = data.tick_count;
+        iters += 1;
     
         if start_stamp.elapsed().as_secs() > 1 {
             freq = iters;

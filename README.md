@@ -4,6 +4,8 @@ A Triggerbot for CS2 using memflow.<br>
 This is a fork of https://github.com/superyu1337/radarflow2. <br>
 Clone the repo on your vm:<br>
 git clone https://github.com/lukrei/Triggerflow-Client.git <br>
+change directory into Triggerflow-Client <br>
+chmod +x *.sh <br>
 Then Update Offset:<br>
 ./update.sh<br>
 Compile it again:<br>

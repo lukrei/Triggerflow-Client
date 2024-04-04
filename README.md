@@ -25,6 +25,8 @@ git clone https://github.com/lukrei/Triggerflow-Client.git
 
 Run triggerflow-client:
 cargo run --release
+# change directory to target path after compiling with --release
+sudo ./radarflow --web-path ../udp_cs2trigger/webradar/
 
 Make your own triggerflow-server on your windows client os which receives the udp packet and then does some action with the game like executing shoot command in game. You can do this via the shoot Base Pointer. You can look Cheat Engine tutorials how to find this basepointer for shooting. I have not included this in this Repository since this is the sensitive part which can get you banned. The Server part of the Triggerflow-Client is completely undetected by VAC but it does not help you much in this scenario since you need some sort of windows application which shoots for you.
 

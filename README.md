@@ -19,5 +19,6 @@ Start to write your own client which accepts the udp packets and trigger shoot v
 
 If you want to manually update your game if cs2-dumper provides old files in the git repository then git clone a2x cs2-dumper and run following command on your hypervisor while cs2 is running inside VM.<br>
 sudo ./cs2-dumper -c qemu<br>
+After that look at update.sh script and copy the generated files from output directory of cs2-dumper to the directory where the files are copied in update.sh script.<br>
 
 Be aware you need a self coded client to receive the udp packets and this can get you vacced because the client relies on the builtin shoot function in cs2. You can find the offsets for shooting via cheat engine. Use it at your own Risk and only on VAC Insecured Servers.

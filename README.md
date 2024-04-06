@@ -17,6 +17,8 @@ Run the program:<br>
 Start Wireshark inside your Windows Client VM and put in the displayfilter udp.port==1337. Now go into the game and put the crosshair onto 4 Teammates then on an Enemy. It should display the packets in Wireshark.<br>
 Start to write your own client which accepts the udp packets and trigger shoot via shoot offset of cs2.<br>
 For testing purposes if Wireshark prints packets comming from your hypervisor on UDP Port 1337 you can use Powershell Script Triggerflow-Server.ps1 on your Windows VM to test behaviour.<br>
+This Powershell script is the "auto-fire" part of the Triggerflow program. Use it at own risk it should work as expected on non vac servers.<br>
+
 But be aware use this dummy Triggerflow-Server.ps1 Script only on VAC Insecured Servers since VAC may not be happy with emuleted things like mouse emulations.<br>
 
 Iam not responsible if you get vac banned by this.<br>

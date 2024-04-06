@@ -17,4 +17,7 @@ Run the program:<br>
 Start Wireshark inside your Windows Client VM and put in the displayfilter udp.port==1337. Now go into the game and put the crosshair onto 4 Teammates then on an Enemy. It should display the packets in Wireshark.<br>
 Start to write your own client which accepts the udp packets and trigger shoot via shoot offset of cs2.<br>
 
+If you want to manually update your game if cs2-dumper provides old files in the git repository then git clone a2x cs2-dumper and run following command on your hypervisor while cs2 is running inside VM.<br>
+sudo ./cs2-dumper -c qemu<br>
+
 Be aware you need a self coded client to receive the udp packets and this can get you vacced because the client relies on the builtin shoot function in cs2. You can find the offsets for shooting via cheat engine. Use it at your own Risk and only on VAC Insecured Servers.
